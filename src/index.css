@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    background-color: #0D0A05;
+    color: #EDE8B0;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: rgba(212, 175, 55, 0.3);
+    color: #F5E4B0;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0D0A05;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #D4AF37;
+    border-radius: 3px;
+  }
+}
+
+@layer utilities {
+  .text-gold-shimmer {
+    background: linear-gradient(90deg, #9A7B0A, #D4AF37, #F5E4B0, #EDD480, #D4AF37, #9A7B0A);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 4s linear infinite;
+  }
+
+  .text-gold {
+    color: #D4AF37;
+  }
+
+  .text-champagne {
+    color: #F5E4B0;
+  }
+
+  .text-ivory {
+    color: #FDFCE8;
+  }
+
+  .border-gold {
+    border-color: #D4AF37;
+  }
+
+  .bg-royal-dark {
+    background-color: #0D0A05;
+  }
+
+  .glass-gold {
+    background: rgba(212, 175, 55, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+  }
+
+  .glass-dark {
+    background: rgba(13, 10, 5, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+  }
+
+  .gold-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+  }
+
+  .gold-divider-thick {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #D4AF37, #F5E4B0, #D4AF37, transparent);
+  }
+
+  .section-bg-pattern {
+    background-image:
+      radial-gradient(circle at 20% 50%, rgba(212,175,55,0.05) 0%, transparent 50%),
+      radial-gradient(circle at 80% 50%, rgba(212,175,55,0.05) 0%, transparent 50%);
+  }
+
+  .candle-glow-effect {
+    background: radial-gradient(ellipse at center, rgba(212,175,55,0.12) 0%, transparent 70%);
+  }
+
+  .arch-clip {
+    clip-path: polygon(0% 100%, 0% 40%, 10% 20%, 25% 8%, 50% 0%, 75% 8%, 90% 20%, 100% 40%, 100% 100%);
+  }
+}
+
+/* Islamic geometric pattern */
+.islamic-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='%23D4AF37' stroke-width='0.4' opacity='0.15'%3E%3Cpolygon points='30,2 55,17 55,43 30,58 5,43 5,17'/%3E%3Cpolygon points='30,10 48,20 48,40 30,50 12,40 12,20'/%3E%3Cline x1='30' y1='2' x2='30' y2='10'/%3E%3Cline x1='55' y1='17' x2='48' y2='20'/%3E%3Cline x1='55' y1='43' x2='48' y2='40'/%3E%3Cline x1='30' y1='58' x2='30' y2='50'/%3E%3Cline x1='5' y1='43' x2='12' y2='40'/%3E%3Cline x1='5' y1='17' x2='12' y2='20'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.islamic-pattern-light {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='%23D4AF37' stroke-width='0.5' opacity='0.08'%3E%3Cpolygon points='30,2 55,17 55,43 30,58 5,43 5,17'/%3E%3Cpolygon points='30,10 48,20 48,40 30,50 12,40 12,20'/%3E%3Cline x1='30' y1='2' x2='30' y2='10'/%3E%3Cline x1='55' y1='17' x2='48' y2='20'/%3E%3Cline x1='55' y1='43' x2='48' y2='40'/%3E%3Cline x1='30' y1='58' x2='30' y2='50'/%3E%3Cline x1='5' y1='43' x2='12' y2='40'/%3E%3Cline x1='5' y1='17' x2='12' y2='20'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Particle animation overrides */
+@keyframes particleDrift {
+  0% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 0.6; }
+  100% { transform: translateY(-100vh) translateX(var(--drift-x, 30px)) rotate(360deg); opacity: 0; }
+}
+
+.particle {
+  animation: particleDrift var(--duration, 8s) linear var(--delay, 0s) infinite;
+}
+

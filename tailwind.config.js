@@ -1,0 +1,126 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {
+      colors: {
+        ivory: {
+          50: '#FFFFF8',
+          100: '#FEFEF0',
+          200: '#FDFCE8',
+          300: '#FAF8DC',
+          400: '#F5F0C8',
+          500: '#EDE8B0',
+        },
+        champagne: {
+          100: '#FFF8E7',
+          200: '#FAEECA',
+          300: '#F5E4B0',
+          400: '#EDD480',
+          500: '#D4AF37',
+          600: '#B8960C',
+          700: '#9A7B0A',
+          800: '#7D6308',
+          900: '#614C05',
+        },
+        gold: {
+          100: '#FFF9E6',
+          200: '#FFE880',
+          300: '#FFD700',
+          400: '#ECC94B',
+          500: '#D4AF37',
+          600: '#B8960C',
+          700: '#996515',
+          800: '#7D5A0A',
+          900: '#5C3D00',
+        },
+        royal: {
+          50: '#1A1209',
+          100: '#1F1810',
+          200: '#261D14',
+          300: '#2E2118',
+          400: '#3A2A1E',
+          500: '#4A3728',
+          600: '#5C4535',
+          700: '#705444',
+          800: '#8A6855',
+          900: '#A8806A',
+        },
+        emerald: {
+          wedding: '#1A4A3A',
+          light: '#2D6B55',
+          pale: '#4A8A72',
+        },
+        petal: {
+          rose: '#F5C8C8',
+          blush: '#FAE0D4',
+          cream: '#FFF0E8',
+        },
+      },
+      fontFamily: {
+        cormorant: ['Cormorant Garamond', 'Georgia', 'serif'],
+        playfair: ['Playfair Display', 'Georgia', 'serif'],
+        vibes: ['Great Vibes', 'cursive'],
+        urdu: ['Noto Nastaliq Urdu', 'serif'],
+      },
+      backgroundImage: {
+        'gold-gradient': 'linear-gradient(135deg, #D4AF37, #F5E4B0, #D4AF37, #9A7B0A)',
+        'royal-gradient': 'linear-gradient(180deg, #0D0A05 0%, #1F1608 50%, #0D0A05 100%)',
+        'candle-glow': 'radial-gradient(ellipse at center, rgba(212,175,55,0.15) 0%, transparent 70%)',
+        'arch-glow': 'radial-gradient(ellipse at top center, rgba(212,175,55,0.2) 0%, transparent 60%)',
+      },
+      animation: {
+        'shimmer': 'shimmer 3s linear infinite',
+        'float': 'float 6s ease-in-out infinite',
+        'float-slow': 'float 10s ease-in-out infinite',
+        'petal-fall': 'petalFall 8s linear infinite',
+        'glow-pulse': 'glowPulse 3s ease-in-out infinite',
+        'candle-flicker': 'candleFlicker 2s ease-in-out infinite',
+        'fade-up': 'fadeUp 1s ease-out forwards',
+        'slow-zoom': 'slowZoom 20s ease-in-out infinite alternate',
+        'spin-slow': 'spin 20s linear infinite',
+      },
+      keyframes: {
+        shimmer: {
+          '0%': { backgroundPosition: '-200% center' },
+          '100%': { backgroundPosition: '200% center' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
+        petalFall: {
+          '0%': { transform: 'translateY(-10vh) rotate(0deg)', opacity: '0' },
+          '10%': { opacity: '1' },
+          '90%': { opacity: '0.6' },
+          '100%': { transform: 'translateY(110vh) rotate(720deg)', opacity: '0' },
+        },
+        glowPulse: {
+          '0%, 100%': { boxShadow: '0 0 20px rgba(212,175,55,0.3), 0 0 40px rgba(212,175,55,0.1)' },
+          '50%': { boxShadow: '0 0 40px rgba(212,175,55,0.6), 0 0 80px rgba(212,175,55,0.2)' },
+        },
+        candleFlicker: {
+          '0%, 100%': { opacity: '0.8', transform: 'scaleY(1)' },
+          '25%': { opacity: '1', transform: 'scaleY(1.05)' },
+          '75%': { opacity: '0.7', transform: 'scaleY(0.95)' },
+        },
+        fadeUp: {
+          '0%': { opacity: '0', transform: 'translateY(40px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        slowZoom: {
+          '0%': { transform: 'scale(1)' },
+          '100%': { transform: 'scale(1.08)' },
+        },
+      },
+      boxShadow: {
+        'gold': '0 0 30px rgba(212,175,55,0.4), 0 0 60px rgba(212,175,55,0.15)',
+        'gold-sm': '0 0 15px rgba(212,175,55,0.3)',
+        'gold-lg': '0 0 60px rgba(212,175,55,0.5), 0 0 120px rgba(212,175,55,0.2)',
+        'royal': '0 20px 60px rgba(0,0,0,0.5), 0 8px 20px rgba(0,0,0,0.3)',
+        'glass': '0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.1)',
+      },
+    },
+  },
+  plugins: [],
+};
