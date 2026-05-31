@@ -144,7 +144,7 @@ export default function HeroSection() {
             fontFamily: "'Gwendolyn', cursive",
           }}
         >
-          Shuhaib
+          Shamma
         </motion.h1>
 
         {/* Ampersand */}
@@ -170,7 +170,7 @@ export default function HeroSection() {
             fontFamily: "'Gwendolyn', cursive",
           }}
         >
-          Shamma
+          Shuhaib
         </motion.h1>
 
         {/* Divider */}

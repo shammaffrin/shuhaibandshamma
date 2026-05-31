@@ -78,7 +78,7 @@ export default function Footer() {
             className="text-5xl sm:text-4xl text-[#D4AF37]"
             style={{ fontFamily: "'Gwendolyn', cursive", }}
           >
-            Shuhaib
+            Shamma
           </span>
 
           <Heart size={18} className="text-[#D4AF37]" fill="currentColor" />
@@ -87,7 +87,7 @@ export default function Footer() {
             className="text-5xl sm:text-4xl text-[#D4AF37]"
             style={{ fontFamily: "'Gwendolyn', cursive", }}
           >
-            Shamma
+            Shuhaib
           </span>
         </motion.div>
 
